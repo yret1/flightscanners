@@ -1,18 +1,44 @@
+import { Input } from "@/components/ui/input"
+
+
+import DatePickerWithRange from "../Range/Daterange"
+
 import React from 'react'
 
 export const Booking = () => {
   return (
-    <section className='absolute left-1/2 -translate-x-1/2 -bottom-28 h-80 w-80 sm:w-96 sm:h-96 rounded-md bg-neutral-100 shadow-2xl shadow-black p-2    '>
-        <section className='border-4 h-full border-purple-600 rounded-md'>
+    <section className='absolute w-screen flex justify-center items-center -bottom-40 min-h-80  sm:h-96'>
 
-            <form className='h-full w-full' action="">
 
-                <legend className='font-bold raleway text-black text-2xl text-center p-2'>Find A Flight</legend>
+        <section className='border-4  w-72 sm:w-10/12 bg-slate-200 border-purple-600 shadow-lg shadow-black rounded-md'>
 
-                <fieldset className='w-full p-2 border-2 border-purple-600 flex justify-between'>
-                    <h2 className='text-black font-semibold'>From</h2>
-                    <input type="text" />
-                </fieldset>
+            <legend className='font-bold raleway text-black text-2xl text-center p-2'>Find A Flight</legend>
+
+            <form className='h-full w-full p-4 flex justify-center gap-7 flex-wrap' action="">
+
+                <section className='flex gap-2'>
+                <div className="flex flex-col border-2 rounded-md p-2 justify-center border-purple-600 ">
+                        <h2 className="font-bold text-lg">Select Departure</h2>
+                        <Input type="text" placeholder="From" className="bg-white" />
+                    </div>
+
+                    <div className="flex flex-col border-2 rounded-md p-2 justify-center border-purple-600 ">
+                        <h2 className="font-bold text-lg">Select Arrival</h2>
+                        <Input type="text" placeholder="To" className="bg-white" />
+                    </div>
+                
+                </section>
+                <section className='flex gap-2 justify-center items-center'>
+                    
+                    <div className="flex flex-col border-2 rounded-md p-2 justify-center border-purple-600 ">
+                        <h2 className="font-bold text-lg">Select your dates</h2>
+                        <DatePickerWithRange />
+                    </div>
+                    <div className="flex flex-col border-2 rounded-md justify-center border-purple-600 ">
+                        
+                        <button className="h-full p-2 hover:text-white font-semibold hover:bg-purple-600">Search Flights</button>
+                    </div>
+                </section>
 
             </form>
 
