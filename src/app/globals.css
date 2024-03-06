@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -30,4 +31,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+
+.arrows {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #6254f3 2px, #fff 1px);
+  animation: translateBG 180s linear infinite;
+
+}
+
+@keyframes translateBG {
+  0% {
+    background-position:0px;
+  }
+  100% {
+    background-position: 4000px 4000px;
+  }
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
 }
